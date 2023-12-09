@@ -1,0 +1,106 @@
+# Proje kök dizini
+root = "."
+
+# Test verilerinin bulunduğu dizin
+testdata_dir = "testdata"
+
+# Geçici dosyaların ve derleme çıktılarının saklandığı geçici dizin
+tmp_dir = "tmp"
+
+[build]
+# Derleme için kullanılacak ek argümanlar
+args_bin = []
+
+# Derleme sonucu oluşturulan ana yürütülebilir dosyanın yolu
+bin = "./tmp/main"
+
+# Derleme komutu
+cmd = "go build -o ./tmp/main ."
+
+# Derleme işlemi için gecikme süresi
+delay = 0
+
+# İzlenmeyecek dizinler
+exclude_dir = ["assets", "tmp", "vendor", "testdata"]
+
+# İzlenmeyecek dosyalar
+exclude_file = []
+
+# İzlenmeyecek dosyaların regex desenleri
+exclude_regex = ["_test.go"]
+
+# Değişmeyen dosyaların yeniden derleme işlemine dahil edilip edilmeyeceği
+exclude_unchanged = false
+
+# Sembolik bağlantıları takip etme
+follow_symlink = false
+
+# Tam yürütülebilir dosya yolu (DLV Debugger ile kullanım)
+full_bin = "dlv exec --accept-multiclient --log --headless --continue --listen :4000 --api-version 2 ./tmp/main"
+
+# İzlenecek dizinler
+include_dir = []
+
+# İzlenecek dosya uzantıları
+include_ext = ["go", "tpl", "tmpl", "html"]
+
+# İzlenecek dosyalar
+include_file = []
+
+# Derleme sonrası sonlandırma gecikme süresi
+kill_delay = "0s"
+
+# Derleme sırasında oluşan hataların kaydedileceği dosya
+log = "build-errors.log"
+
+# Düzenli olarak kontrol edilen bir kaynağın durumunu
+poll = true
+
+# Kontrol aralığı
+poll_interval = 0
+
+# Yeniden çalıştırma işlemi
+rerun = false
+
+# Yeniden çalıştırma gecikme süresi
+rerun_delay = 0
+
+# Kesme sinyali gönderme
+send_interrupt = false
+
+# Hata oluştuğunda durma işlemi
+stop_on_error = false
+
+[color]
+# Uygulama rengi
+app = ""
+
+# Derleme rengi
+build = "yellow"
+
+# Ana rengi
+main = "magenta"
+
+# Yürütücü rengi
+runner = "green"
+
+# İzleyici rengi
+watcher = "cyan"
+
+[log]
+# Sadece ana logun etkin olup olmadığı
+main_only = false
+
+# Zaman bilgisinin eklenip eklenmeyeceği
+time = false
+
+[misc]
+# Çıkışta temizleme işleminin etkin olup olmadığı
+clean_on_exit = false
+
+[screen]
+# Yeniden derleme yapıldığında ekranın temizlenip temizlenmeyeceği
+clear_on_rebuild = false
+
+# Kaydırma durumunun korunup korunmayacağı
+keep_scroll = true
