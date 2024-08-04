@@ -12,7 +12,7 @@ COPY . .
 RUN go mod download
 
 # Air ve Delve'yi indir ve yükle
-RUN go install github.com/cosmtrek/air@latest
+RUN go install github.com/air-verse/air@latest
 RUN go install github.com/go-delve/delve/cmd/dlv@latest
 
 # Uygulamayı derle ve çalıştır
